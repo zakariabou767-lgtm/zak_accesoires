@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ZAK_ACCESSOIRES</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b0b0b;
+            color: white;
+        }
+
+        /* NAVBAR */
+        nav {
+            height: 75px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 7%;
+            background: #111;
+            border-bottom: 1px solid #333;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #d4af37;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+            background:
+                radial-gradient(circle at center, #30270c, #0b0b0b 60%);
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            color: #d4af37;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #ccc;
+            margin-bottom: 30px;
+        }
+
+        .hero button {
+            padding: 14px 35px;
+            border: none;
+            border-radius: 30px;
+            background: #d4af37;
+            color: black;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .hero button:hover {
+            transform: scale(1.05);
+        }
+
+        /* PRODUCTS */
+        .section {
+            width: 90%;
+            max-width: 1200px;
+            margin: 60px auto;
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 35px;
+            margin-bottom: 40px;
+            color: #d4af37;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .product {
+            background: #151515;
+            border: 1px solid #292929;
+            border-radius: 18px;
+            overflow: hidden;
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .product:hover {
+            transform: translateY(-8px);
+            border-color: #d4af37;
+            box-shadow: 0 10px 30px #000;
+        }
+
+        .product-img {
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            background: #202020;
+        }
+
+        .product h3 {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+        .price {
+            color: #d4af37;
+            font-size: 23px;
+            font-weight: bold;
+            margin: 15px;
+        }
+
+        .buy {
+            margin-bottom: 20px;
+            padding: 11px 25px;
+            border: none;
+            border-radius: 25px;
+            background: #d4af37;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .buy:hover {
+            background: white;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #111;
+            text-align: center;
+            padding: 35px;
+            margin-top: 70px;
+            color: #999;
+        }
+
+        footer strong {
+            color: #d4af37;
+        }
+
+        /* PHONE */
+        @media (max-width: 600px) {
+
+            nav {
+                padding: 0 20px;
+            }
+
+            nav a {
+                margin-left: 10px;
+                font-size: 13px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">ZAK_ACCESSOIRES</div>
+
+        <div>
+            <a href="#">Accueil</a>
+            <a href="#shop">Boutique</a>
+        </div>
+    </nav>
+
+
+    <section class="hero">
+
+        <h1>ZAK_ACCESSOIRES</h1>
+
+        <p>✨ L'élégance commence par les détails ✨</p>
+
+        <button onclick="location.href='#shop'">
+            Découvrir la boutique
+        </button>
+
+    </section>
+
+
+    <section class="section" id="shop">
+
+        <h2>Nos Accessoires</h2>
+
+        <div class="products">
+
+            <div class="product">
+                <div class="product-img">💍</div>
+                <h3>Bague Élégante</h3>
+                <div class="price">49 DH</div>
+                <button class="buy" onclick="acheter('Bague Élégante')">
+                    Acheter
+                </button>
+            </div>
+
+
+            <div class="product">
+                <div class="product-img">📿</div>
+                <h3>Collier TULEP</h3>
+                <div class="price">79 DH</div>
+                <button class="buy" onclick="acheter('Collier Golden')">
+                    Acheter
+                </button>
+            </div>
+
+
+            <div class="product">
+                <div class="product-img">✨</div>
+                <h3>Bracelet LACOSTE</h3>
+                <div class="price">59 DH</div>
+                <button class="buy" onclick="acheter('Bracelet Luxe')">
+                    Acheter
+                </button>
+            </div>
+
+
+            <div class="product">
+                <div class="product-img">👑</div>
+                <h3>accessoire HERMIS</h3>
+                <div class="price">99 DH</div>
+                <button class="buy" onclick="acheter('Accessoire Royal')">
+                    Acheter
+                </button>
+            </div>
+
+
+            <div class="product">
+                <div class="product-img">👜</div>
+                <h3>Sac prada</h3>
+                <div class="price">149 DH</div>
+                <button class="buy" onclick="acheter('Sac Élégant')">
+                    Acheter
+                </button>
+            </div>
+
+
+            <div class="product">
+                <div class="product-img">⌚</div>
+                <h3>Montre rolex</h3>
+                <div class="price">199 DH</div>
+                <button class="buy" onclick="acheter('Montre ROLEX')">
+                    Acheter
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <strong>ZAK_ACCESSOIRES</strong>
+
+        <br><br>
+
+        Votre style, votre élégance ✨
+
+        <br><br>
+
+        © 2026 ZAK_ACCESSOIRES
+
+    </footer>
+
+
+    <script>
+
+        function acheter(produit) {
+            const message = encodeURIComponent(
+                "Bonjour, je suis intéressé(e) par : " + produit
+            );
+            window.open(
+                "https://www.instagram.com/zak_accesoires/",
+                "_blank"
+            );
+        }
+
+    </script>
+
+</body>
+</html>
