@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZAK Accessoires</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo">ZAK <span>Accessoires</span></div>
+  <nav>
+    <a href="#home">Accueil</a>
+    <a href="#products">Produits</a>
+    <a href="#contact">Contact</a>
+    <button id="themeBtn">🌙</button>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <div>
+    <p class="small">BIENVENUE CHEZ</p>
+    <h1>ZAK <span>Accessoires</span></h1>
+    <p>Découvrez nos accessoires élégants et tendance.</p>
+    <a class="btn" href="#products">Voir les produits</a>
+  </div>
+</section>
+
+<section id="products" class="section">
+  <h2>Nos produits</h2>
+  <div class="tools">
+    <input id="search" type="search" placeholder="Rechercher un produit...">
+  </div>
+  <div id="productsGrid" class="products"></div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <p>Pour commander, contactez-nous sur Instagram.</p>
+  <a class="btn" href="https://www.instagram.com/zak_accesoires/" target="_blank">📷 Instagram</a>
+</section>
+
+<footer>
+  <p>© 2026 ZAK Accessoires — Tous droits réservés.</p>
+</footer>
+
+<div id="cart" class="cart">
+  <button id="closeCart">×</button>
+  <h2>Votre panier</h2>
+  <div id="cartItems"></div>
+  <div class="total">Total : <strong id="total">0 DH</strong></div>
+  <button id="orderBtn" class="btn full">Commander</button>
+</div>
+
+<div id="overlay"></div>
+<button id="cartBtn" class="cart-float">🛒 <span id="cartCount">0</span></button>
+
+<script src="script.js"></script>
+</body>
+</html>
